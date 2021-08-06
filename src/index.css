@@ -30,3 +30,22 @@ button {
   color: #0d1317;
   font-size: 24px;
 }
+
+input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #6564db;
+  border: 0px;
+  border-radius: 7px;
+  width: 200px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #0d1317;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #0d1317;
+}

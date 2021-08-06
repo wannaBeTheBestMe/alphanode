@@ -6,6 +6,7 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  position: absolute;
   transition-duration: 0.2s;
 }
 
@@ -56,4 +57,17 @@
   content: "";
   clear: both;
   display: table;
+}
+
+.flex-container-2 > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+}
+
+.flex-container-1 > input {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
 }

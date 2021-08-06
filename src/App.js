@@ -2,32 +2,38 @@ import React from "react";
 import logo from './logo.svg';
 import './App.css';
 
-export default class Game extends React.Component {
+export function Button(props) {
+  const buttonWidth = 100 / props.buttons;
+  const padding = 9 / 25 * buttonWidth;
+  const requiredStyles = { "width": `${buttonWidth}%`, "paddingLeft": padding, "paddingRight": padding };
+  return (
+    <div className="box" style={requiredStyles}>
+      <button className="button" onClick={props.callback}>
+        {props.message}
+      </button>
+    </div>
+  );
+}
+
+Button.defaultProps = {
+  buttons: 2,
+};
+
+export function Body(props) {
+  return props.body;
+}
+
+export default class Pane extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <div className="pane">
-        <h1>Here when you want to get away.</h1>
-        <p>Which one are you today?</p>
-        <div className="clearfix">
-          <div className="box">
-            <button className="button" onClick={() => { console.log("Pressed") }}>
-              <em>
-                “I don’t know where but I <b>do</b> know where. I’ve been there in my dreams but I don’t know its <b>name</b>.”
-              </em>
-            </button>
-          </div>
-          <div className="box">
-            <button className="button" onClick={() => { console.log("Pressed") }}>
-              <em>
-                “I know <b>exactly</b> where I want to go and I can’t wait.”
-              </em>
-            </button>
-          </div>
-        </div>
+      <div style={this.props.alignment} className="pane">
+        {this.props.heading}
+        {this.props.subtitle}
+        {<Body body={this.props.body} />}
       </div>
     );
   }
