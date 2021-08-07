@@ -1,5 +1,5 @@
 import React from "react";
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 
 export function Button(props) {
@@ -30,7 +30,7 @@ export default class Pane extends React.Component {
 
   render() {
     return (
-      <div style={this.props.alignment} className="pane">
+      <div className="pane">
         {this.props.heading}
         {this.props.subtitle}
         {<Body body={this.props.body} />}
