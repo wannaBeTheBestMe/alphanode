@@ -4,7 +4,7 @@ import './index.css';
 import pfp from './pfp.jpg';
 import google from './google.svg';
 import apple from './apple.svg';
-import Pane, { Button, Body } from './App';
+import Pane, { Button, CallToAction } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,26 +12,6 @@ ReactDOM.render(
       <Pane
         heading={<h1>Here when you want to get away.</h1>}
         subtitle={<p>Which one are you today?</p>}
-        body={
-          <Body body={
-            <div className="clearfix">
-              <Button
-                callback={() => { console.log("Pressed") }}
-                message={
-                  <em>
-                    “I don’t know where but I <b>do</b> know where. I’ve been there in my dreams but I don’t know its <b>name</b>.”
-                  </em>
-                } />
-              <Button
-                callback={() => { }}
-                message={
-                  <em>
-                    “I know <b>exactly</b> where I want to go and I can’t wait.”
-                  </em>
-                } />
-            </div>
-          } />
-        }
       />
 
       <Pane
@@ -58,17 +38,15 @@ ReactDOM.render(
           </div>
         }
         body={
-          <Body body={
-            <div>
-              <p style={{ "textAlign": "justify", "clear": "left", "marginLeft": "60px", "marginRight": "60px" }} >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatem unde eligendi doloribus, enim praesentium? Enim, reiciendis aspernatur recusandae voluptas nisi voluptate aut fugiat ipsum eos libero veritatis veniam distinctio.
-                Optio nulla, ducimus a aut dolorem, ipsa cumque quos deserunt tenetur, reiciendis dolore sed harum perferendis voluptatibus. Qui repellendus fuga sit? Facere iusto libero consectetur molestiae voluptatum corrupti veniam facilis?
-                Neque laboriosam porro, sit voluptatibus non animi distinctio exercitationem possimus repudiandae officia eveniet...
-              </p>
-              <p style={{ "fontWeight": "500" }}>Read More</p>
-            </div>
-          }
-          />}
+          <div>
+            <p style={{ "textAlign": "justify", "clear": "left", "marginLeft": "60px", "marginRight": "60px" }} >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatem unde eligendi doloribus, enim praesentium? Enim, reiciendis aspernatur recusandae voluptas nisi voluptate aut fugiat ipsum eos libero veritatis veniam distinctio.
+              Optio nulla, ducimus a aut dolorem, ipsa cumque quos deserunt tenetur, reiciendis dolore sed harum perferendis voluptatibus. Qui repellendus fuga sit? Facere iusto libero consectetur molestiae voluptatum corrupti veniam facilis?
+              Neque laboriosam porro, sit voluptatibus non animi distinctio exercitationem possimus repudiandae officia eveniet...
+            </p>
+            <p style={{ "fontWeight": "500" }}>Read More</p>
+          </div>
+        }
       />
 
       <Pane
